@@ -1,5 +1,4 @@
 import React from "react";
-
 // Este es un componente particular (y esta modularizado)
 
 export default function Pet({ name, animal, kind }) {
