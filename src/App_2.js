@@ -7,11 +7,15 @@ import Details from "./Details";
 import ThemeContext from "./ThemeContext";
 
 // Componente global
-const App = () => {
-  const themehook = useState("peru");
-  return (
-    <ThemeContext.Provider value={themehook}>
-      <React.StrictMode>
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { themehook: "peru" };
+  }
+
+  render() {
+    return (
+      <ThemeContext.Provider value={this.state.themehook}>
         <div>
           <header>
             <Link to="/">Adopt Me!</Link>
@@ -21,10 +25,10 @@ const App = () => {
             <Details path="/details/:id" />
           </Router>
         </div>
-      </React.StrictMode>
-    </ThemeContext.Provider>
-  );
-};
+      </ThemeContext.Provider>
+    );
+  }
+}
 
 // Renderizado
 ReactDOM.render(<App />, document.getElementById("root"));
