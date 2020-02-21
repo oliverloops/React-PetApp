@@ -1,2 +1,2 @@
-# React Pet App :dog::cat:
-### _A practical React project using Hooks and Classes_
+# React Pet App :dog::cat::bird:
+### _A practical React production ready project using Hooks and Classes_
