@@ -3,12 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "App_2.js",
+  "engines": {
+    "node": "10.15.3",
+    "npm": "6.13.6"
+  },
   "scripts": {
+    "start": "node server.js",
+    "server": "nodemon index.js",
     "dev": "parcel src/page_3.html",
+    "build": "parcel build src/page_3.html",
     "dev:mock": "cross-env PET_MOCK=mock parcel src/page_3.html",
     "format": "prettier \"src/**/*.{js,html}\" --write",
-    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
   },
   "keywords": [],
   "author": "Oliver ALR",
@@ -32,7 +38,12 @@
   "dependencies": {
     "@frontendmasters/pet": "^1.0.3",
     "@reach/router": "^1.3.1",
+    "concurrently": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "hbs": "^4.1.0",
     "nodemon": "^2.0.2",
+    "path": "^0.12.7",
     "reach-router": "0.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
